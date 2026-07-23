@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bangalore Kitchen — Momentum Plan</title>
+<title>Bangalore Kitchen — The 60-Day Growth Pilot</title>
 <style>
   :root{
     --cream:#FBF7F0; --card:#FFFFFF; --ink:#2E2A26; --muted:#7A6F63;
@@ -21,7 +21,7 @@
   header .kicker{letter-spacing:.25em;text-transform:uppercase;font-size:12px;color:var(--gold-lt);margin-bottom:14px;}
   header h1{font-family:Georgia,serif;font-size:clamp(30px,5vw,46px);font-weight:600;line-height:1.15;}
   header h1 em{color:#E9C87A;font-style:italic;}
-  header .sub{margin-top:16px;font-size:17px;color:#E4D6C2;max-width:560px;margin-left:auto;margin-right:auto;}
+  header .sub{margin-top:16px;font-size:17px;color:#E4D6C2;max-width:580px;margin-left:auto;margin-right:auto;}
   header .byline{margin-top:22px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#C9A96A;}
 
   section{margin-top:56px;}
@@ -29,6 +29,11 @@
   .lede{color:var(--muted);margin-bottom:22px;max-width:640px;}
   .num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;
        background:var(--gold);color:#fff;font-size:15px;font-weight:700;margin-right:10px;vertical-align:-6px;font-family:Georgia,serif;}
+
+  /* URGENCY */
+  .urgency{background:var(--maroon-dk);color:#F3E7CF;border-radius:14px;padding:20px 24px;margin-top:34px;font-size:15.5px;line-height:1.55;}
+  .urgency b{color:#E9C87A;}
+  .urgency .h{font-family:Georgia,serif;font-size:18px;color:#F6EFE2;margin-bottom:6px;}
 
   /* HEARD */
   .heard{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
@@ -45,6 +50,14 @@
   .goal h3{font-size:16px;margin:10px 0 6px;color:var(--maroon);}
   .goal p{font-size:14px;color:var(--muted);line-height:1.5;}
 
+  /* WORKSTREAMS */
+  .work{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media(max-width:760px){.work{grid-template-columns:1fr;}}
+  .wcard{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px;box-shadow:0 1px 4px rgba(60,40,20,.05);}
+  .wcard .ico{font-size:23px;}
+  .wcard h3{font-size:16px;margin:8px 0 6px;color:var(--maroon-dk);}
+  .wcard p{font-size:14px;color:var(--muted);line-height:1.5;}
+
   /* TIMELINE */
   .timeline{position:relative;margin-left:18px;padding-left:38px;border-left:3px solid var(--gold-lt);}
   .step{position:relative;padding-bottom:34px;}
@@ -52,6 +65,7 @@
   .step .dot{position:absolute;left:-53px;top:2px;width:28px;height:28px;border-radius:50%;
              background:var(--maroon);color:#F3E3C0;display:flex;align-items:center;justify-content:center;
              font-family:Georgia,serif;font-weight:700;font-size:14px;border:3px solid var(--cream);box-shadow:0 0 0 2px var(--gold-lt);}
+  .step.key .dot{background:var(--gold);color:#3a2408;box-shadow:0 0 0 2px var(--maroon);}
   .step .when{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;}
   .step h3{font-family:Georgia,serif;font-size:21px;color:var(--maroon-dk);margin:2px 0 8px;}
   .step ul{list-style:none;}
@@ -117,7 +131,7 @@
   .pg2head{background:var(--maroon-dk);color:#F6EFE2;border-radius:16px;padding:36px 30px;text-align:center;margin-top:20px;}
   .pg2head .kicker{letter-spacing:.25em;text-transform:uppercase;font-size:12px;color:var(--gold-lt);margin-bottom:10px;}
   .pg2head h2{font-family:Georgia,serif;color:#F6EFE2;font-size:clamp(24px,4vw,32px);margin:0;border:none;}
-  .pg2head p{margin-top:12px;color:#E4D6C2;font-size:15px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.55;}
+  .pg2head p{margin-top:12px;color:#E4D6C2;font-size:15px;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.55;}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
   @media(max-width:640px){.split{grid-template-columns:1fr;}}
   .side{border-radius:10px;padding:13px 15px;font-size:14.5px;line-height:1.5;}
@@ -142,32 +156,39 @@
     header{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     body{font-size:14px;}
     .pgbreak{page-break-before:always;}
-    .pg2head,.side.you,.side.me,.step .dot,.pillar{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .pg2head,.side.you,.side.me,.step .dot,.pillar,.urgency{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="kicker">Prepared for Raghu &amp; Sunita · July 2026</div>
-  <h1>Bangalore Kitchen<br><em>The Momentum Plan</em></h1>
-  <p class="sub">The food already markets itself — the room is packed every time the doors open.
-  This plan makes sure the rest of Jersey City finds out.</p>
+  <div class="kicker">The 60-Day Growth Pilot · Raghu &amp; Sunita · Hard start Fri, Jul 31 2026</div>
+  <h1>Bangalore Kitchen<br><em>The Growth Pilot</em></h1>
+  <p class="sub">We're aligned and it's on. Sixty days, a clear scoreboard, and a real start date —
+  this is the plan we run, beginning the day I land back in town.</p>
   <div class="byline">Daivik Suresh · Bangalore → Newport, JC</div>
 </header>
 
 <div class="wrap">
+
+  <div class="urgency">
+    <div class="h">⚡ This is a real pilot with a hard start — and I'm all in.</div>
+    Photos begin <b>this week</b>. I'm on a work trip Jul 26–31, and the day I land — <b>Friday, Jul 31</b> —
+    I come straight to the restaurant to set the baseline in person. Sixty days, one scoreboard, then we
+    decide the partnership together. You move fast, I move faster. Let's build.
+  </div>
 
   <section>
     <h2><span class="num">1</span>What you told me</h2>
     <div class="heard">
       <div class="quote">
         <div class="q">“Our biggest problem is social presence and having the momentum.”</div>
-        <div class="a">— Sunita. So that's exactly what this plan solves. Nothing more, nothing less.</div>
+        <div class="a">— Sunita. That's exactly what this pilot solves. Nothing more, nothing less.</div>
       </div>
       <div class="quote">
         <div class="q">The restaurant is packed whenever it's open.</div>
-        <div class="a">That's the headline. We don't need social media to fill seats — we need it to turn a full room into a growing brand.</div>
+        <div class="a">That's the headline. We don't need social to fill seats — we need it to turn a full room into a growing brand.</div>
       </div>
     </div>
   </section>
@@ -177,94 +198,36 @@
     <p class="lede">Four jobs — none of them are "get more dinner customers."</p>
     <div class="goals">
       <div class="goal"><div class="ico">📈</div><h3>Compound the crowd</h3><p>Hundreds eat here weekly and post nothing. Turn tonight's guests into tomorrow's audience.</p></div>
-      <div class="goal"><div class="ico">🕰️</div><h3>Make hours clear</h3><p>Unusual hours turn people away silently. Communicated well, they become part of the story — "fresh batter runs out."</p></div>
-      <div class="goal"><div class="ico">🥘</div><h3>Catering &amp; direct orders</h3><p>The high-margin channels a full dining room never maxes out. Newport &amp; Exchange Place offices are next door.</p></div>
-      <div class="goal"><div class="ico">🚀</div><h3>Build optionality</h3><p>A strong brand is what makes business #5, a bigger space, or the next big idea possible later.</p></div>
+      <div class="goal"><div class="ico">🕰️</div><h3>Fill the slow lunches</h3><p>Wednesday &amp; Thursday lunch are quiet. Demand — not luck — fixes that, aimed at the offices next door.</p></div>
+      <div class="goal"><div class="ico">🥘</div><h3>Catering &amp; direct orders</h3><p>The high-margin channels a full dining room never maxes out. Newport &amp; Exchange Place towers are steps away.</p></div>
+      <div class="goal"><div class="ico">🚀</div><h3>Build the brand</h3><p>A strong brand is what makes the next location, a bigger space, or the next idea possible.</p></div>
     </div>
   </section>
 
   <section>
-    <h2><span class="num">3</span>The roadmap</h2>
-    <p class="lede">From tonight to a 60-day checkpoint. Each step small, each one compounding.</p>
-    <div class="timeline">
-
-      <div class="step"><div class="dot">✓</div>
-        <div class="when">Already done</div>
-        <h3>Research &amp; quick wins found</h3>
-        <ul>
-          <li>Website audit complete — the site is good; we build on it, we don't replace it</li>
-          <li><b>Bug found:</b> "Get Directions" sends customers to Seattle, WA 🙃</li>
-          <li><b>Bug found:</b> footer Facebook link points to a different restaurant entirely</li>
-        </ul>
-        <div class="win"><b>5-minute fix:</b> one message to your website rep corrects both.</div>
-      </div>
-
-      <div class="step"><div class="dot">1</div>
-        <div class="when">This week</div>
-        <h3>Set the foundation</h3>
-        <ul>
-          <li>Get account access sorted (checklist below) — nothing changes without your approval</li>
-          <li>Fix the two website bugs via your rep</li>
-          <li>Google Business Profile refresh: photos, hours, weekly post, reply to reviews</li>
-          <li>Record your story — 10 minutes, one voice memo: food truck → four businesses</li>
-        </ul>
-        <div class="win"><b>Possible bonus:</b> a creator friend (~550K followers) visits me this weekend — with your OK, dinner's on me and he may post. Zero cost, zero obligation.</div>
-      </div>
-
-      <div class="step"><div class="dot">2</div>
-        <div class="when">Weeks 1–2</div>
-        <h3>Turn the cameras on</h3>
-        <ul>
-          <li>One filming visit per week during service — we work around you, never in the way</li>
-          <li>Posting begins: 3–4 posts/week + stories every open day</li>
-          <li>Hours pinned everywhere: IG highlight, Google, story template</li>
-          <li>Table cards go out: "Tag us — best post of the month eats free" + review QR</li>
-        </ul>
-      </div>
-
-      <div class="step"><div class="dot">3</div>
-        <div class="when">Weeks 3–4</div>
-        <h3>Open the high-margin doors</h3>
-        <ul>
-          <li>Catering one-pager + IG highlight + Google post — aimed at Newport offices</li>
-          <li>"Skip the line — order at bangalorekitchen.com" sign at the register (every direct order avoids ~30% delivery-app commission — your website subscription starts paying for itself)</li>
-          <li>Story content from the voice memo: who you are, why Bangalore, why benne</li>
-        </ul>
-      </div>
-
-      <div class="step"><div class="dot">4</div>
-        <div class="when">Weeks 4–6</div>
-        <h3>Press, round two</h3>
-        <ul>
-          <li>Your opening got covered. The follow-up story is better: <i>"the Newport dosa spot that's been packed since day one"</i></li>
-          <li>Pitch to Hoboken Girl, Destination JC, r/jerseycity — timed so new visitors land on a thriving Instagram</li>
-        </ul>
-      </div>
-
-      <div class="step"><div class="dot">★</div>
-        <div class="when">Day 60</div>
-        <h3>Checkpoint — did it work?</h3>
-        <ul>
-          <li>We sit down again with the numbers (scoreboard below)</li>
-          <li>If it's working → we plan the next phase together</li>
-          <li>If it's not → you've spent nothing and lost nothing</li>
-        </ul>
-      </div>
-
+    <h2><span class="num">3</span>The plan — six workstreams</h2>
+    <p class="lede">This is the whole scope. Concrete, sequenced, and already researched — dates are on page 2.</p>
+    <div class="work">
+      <div class="wcard"><div class="ico">🌐</div><h3>Fix &amp; sharpen the website</h3><p>Repoint the Instagram + Facebook links (they point to a different "Bangalore Kitchen" in Seattle right now), stand up your real Instagram, and get real photos onto the menu.</p></div>
+      <div class="wcard"><div class="ico">📸</div><h3>Photos &amp; the menu</h3><p>Shoot your signature dishes; my editing team polishes them to match — and beat — the Kashan Kitchen menu you showed me. Same platform, so we can absolutely get there.</p></div>
+      <div class="wcard"><div class="ico">🍽️</div><h3>Reservations — Resy</h3><p>Get discovered as the up-and-coming spot. Flat ~$249/mo, no per-cover fees. A peak-night waitlist keeps the line at the door — that line is your best advertising.</p></div>
+      <div class="wcard"><div class="ico">📦</div><h3>Branded packaging</h3><p>Custom boxes &amp; trays so every takeout and delivery order that leaves the door looks the part. A real investment in the brand — I'll bring options.</p></div>
+      <div class="wcard"><div class="ico">📍</div><h3>Get found &amp; fill lunch</h3><p>Google Business Profile so "indian food near me" finds you, plus a weekday lunch-box combo built for the office towers next door.</p></div>
+      <div class="wcard"><div class="ico">🎶</div><h3>Events — Bollywood Night</h3><p>Your space, your sound system. The kind of night that packs a slow evening and throws off a month of content in one shot.</p></div>
     </div>
   </section>
 
   <section>
-    <h2><span class="num">4</span>How we operate — your time cost: 10 min/week</h2>
+    <h2><span class="num">4</span>How we operate — your time cost stays tiny</h2>
     <div class="roles">
-      <div class="role"><h3>You two 🧑‍🍳</h3><div class="time">10 min / week</div>
-        <p>Approve posts with a 👍 in our group chat. Answer one voice-note question a week. Let us film during service. That's the whole job.</p></div>
+      <div class="role"><h3>You two 🧑‍🍳</h3><div class="time">~10 min / week</div>
+        <p>Approve posts with a 👍 in our group chat. Answer the occasional voice-note question. Let us film during service. That's the whole job.</p></div>
       <div class="role gold"><h3>Account manager 📱</h3><div class="time">Daily</div>
         <p>Runs the Instagram day-to-day — posting, stories, replies, DMs. Trusted, already on board, managed by me.</p></div>
       <div class="role green"><h3>Me 🧠</h3><div class="time">Behind the scenes</div>
-        <p>Strategy, content planning, filming, analytics, Google profile, catering pitch, press. I bring the laptop; you bring the dosas.</p></div>
+        <p>Strategy, content, filming, editing, analytics, Google profile, Resy, catering, packaging, events. I bring the systems; you keep running a packed kitchen.</p></div>
     </div>
-    <div class="flow">Content created → dropped in <b>group chat</b> → your 👍 → posted. <b>Nothing ever goes live without your approval.</b></div>
+    <div class="flow">Content created → dropped in <b>group chat</b> → your 👍 → posted. <b>Nothing goes live without your approval.</b></div>
   </section>
 
   <section>
@@ -272,171 +235,172 @@
     <div class="pillars">
       <div class="pillar"><div class="ico">🔥</div><h4>The Energy</h4><p>The packed room, the line, the buzz. Scarcity sells itself.</p></div>
       <div class="pillar"><div class="ico">🧈</div><h4>Dosa ASMR</h4><p>Butter on the tawa. The flip. The crack. No words needed.</p></div>
-      <div class="pillar"><div class="ico">❤️</div><h4>Your Story</h4><p>Food truck → four businesses. Faces build loyalty; food builds cravings.</p></div>
+      <div class="pillar"><div class="ico">❤️</div><h4>Your Story</h4><p>Food truck to four businesses. Faces build loyalty; food builds cravings.</p></div>
       <div class="pillar"><div class="ico">🎓</div><h4>Menu School</h4><p>"What is benne dosa?" — told by someone actually from Bangalore.</p></div>
-      <div class="pillar"><div class="ico">📸</div><h4>Guest Reposts</h4><p>Customers become the media team. Best post of the month eats free.</p></div>
+      <div class="pillar"><div class="ico">📸</div><h4>Guest Reposts</h4><p>We repost the best guest content — customers become the media team.</p></div>
     </div>
   </section>
 
   <section>
-    <h2><span class="num">6</span>What I need from you today</h2>
-    <p class="lede">Check them off as we go — this is the whole ask.</p>
+    <h2><span class="num">6</span>What I need from you to start</h2>
+    <p class="lede">Five things get us to a strong baseline. Check them off as we go.</p>
     <div class="asks" id="asks">
-      <label class="ask"><input type="checkbox"><div><div class="t">Instagram access</div><div class="d">Existing account login or collaborator access — or your blessing to set one up properly.</div></div></label>
-      <label class="ask"><input type="checkbox"><div><div class="t">Facebook page admin</div><div class="d">Needed to fix the link that currently points to the other "Bangalore Kitchen."</div></div></label>
+      <label class="ask"><input type="checkbox"><div><div class="t">Owner.com access + your website rep's contact</div><div class="d">So I can fix the Seattle links, add menu photos, and set up your real Instagram. I'll get on a call with them next week.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Google Business Profile — manager access</div><div class="d">Quietly the most valuable item here. This is what "indian food near me" runs on.</div></div></label>
-      <label class="ask"><input type="checkbox"><div><div class="t">Your website rep's contact</div><div class="d">One message fixes the Seattle bugs. I'll draft it for you.</div></div></label>
-      <label class="ask"><input type="checkbox"><div><div class="t">Photos, videos &amp; menu you already have</div><div class="d">Whatever exists — a shared album is perfect.</div></div></label>
-      <label class="ask"><input type="checkbox"><div><div class="t">Your story — 10 minutes, recorded</div><div class="d">"How did you go from a food truck to four businesses?" I press record, you just talk.</div></div></label>
-      <label class="ask"><input type="checkbox"><div><div class="t">Yes / No — creator visit this weekend</div><div class="d">~550K followers, dinner on me, might post. No cost or obligation to you either way.</div></div></label>
-      <div class="askcount" id="askcount">0 / 7</div>
+      <label class="ask"><input type="checkbox"><div><div class="t">Photos of the dishes — start sending</div><div class="d">A recent iPhone or any newer phone with a good camera. Same angle, natural light, near a window. Plus any photos/videos/menu you already have.</div></div></label>
+      <label class="ask"><input type="checkbox"><div><div class="t">Green light on Resy</div><div class="d">~$249/month flat, no per-cover fees. I manage the whole setup — I just need your go-ahead.</div></div></label>
+      <label class="ask"><input type="checkbox"><div><div class="t">Your story — 10 minutes, recorded</div><div class="d">"How did you go from a food truck to four businesses?" I press record, you just talk. Fuel for months of content.</div></div></label>
+      <div class="askcount" id="askcount">0 / 5</div>
     </div>
   </section>
 
   <section>
     <h2><span class="num">7</span>The scoreboard — how we'll know it worked</h2>
-    <p class="lede">We define success today so nobody's guessing at day 60. (Targets set together — these are starting suggestions.)</p>
+    <p class="lede">We set the yardstick on day one so nobody's guessing at day 60. (Full scoreboard set together — these are the headlines.)</p>
     <div class="score">
       <div class="metric"><div class="big">+1,000</div><div class="lbl">Instagram followers — real local ones, not bought</div></div>
       <div class="metric"><div class="big">+20%</div><div class="lbl">Direct orders through your own website (vs. delivery apps)</div></div>
-      <div class="metric"><div class="big">1st</div><div class="lbl">Catering inquiry that comes in from social or Google</div></div>
+      <div class="metric"><div class="big">$$$</div><div class="lbl">First catering &amp; events revenue booked from social / Google</div></div>
     </div>
-    <div class="promise">💛 <b>The deal:</b> any costs are on me until this is proven. You risk nothing but 10 minutes a week — and a plate of dosa when I visit.</div>
+    <div class="promise">🎯 <b>The deal:</b> a 60-day pilot with a real scoreboard and a hard start. I don't bill my time — the only costs are the tools the business needs anyway (Resy, packaging), with receipts, no surprises. At day 60 we read the numbers together and structure the partnership.</div>
   </section>
 
   <section>
     <h2><span class="num">8</span>What we will <u>not</u> do</h2>
     <div class="rails">
-      <div class="rail"><b>✓</b> No changes to your website — it's good; we make it work harder</div>
-      <div class="rail"><b>✓</b> No paid ads until free growth is maxed out</div>
+      <div class="rail"><b>✓</b> Build on your website — never break what's working</div>
+      <div class="rail"><b>✓</b> No paid ads until organic growth is maxed out</div>
       <div class="rail"><b>✓</b> No TikTok/YouTube sprawl — Instagram done well, first</div>
       <div class="rail"><b>✓</b> Nothing posted without your 👍</div>
-      <div class="rail"><b>✓</b> No contracts, no invoices, no surprises</div>
+      <div class="rail"><b>✓</b> Clear costs, receipts for anything out-of-pocket — no surprises</div>
     </div>
   </section>
 
   <div class="pgbreak">
     <div class="pg2head">
-      <div class="kicker">Page 2 · The Timeline</div>
-      <h2>From today to a 60-day checkpoint</h2>
-      <p>Real dates, sequenced so it fits around all of our lives — and so it actually gets done.
-      Your side stays 10 minutes a week; the heavy lifting is on me and my team.</p>
+      <div class="kicker">Page 2 · The 60-Day Timeline</div>
+      <h2>Hard start Jul 31 → checkpoint ~Sep 29</h2>
+      <p>Real dates, sequenced around both our calendars so it actually gets done. Photos start now;
+      the pilot clock starts the day I'm on-site. Each phase has a <b>your side</b> and a <b>my side</b>.</p>
     </div>
 
     <section>
-      <p class="lede" style="margin-top:26px;">Every phase below has a <b>your side</b> and a <b>my side</b>. Notice how little is ever on you.</p>
+      <p class="lede" style="margin-top:26px;">The heavy lifting is on me and my team — your side stays light the whole way through.</p>
       <div class="timeline">
 
         <div class="step"><div class="dot">▶</div>
           <div class="when">Now → Sat Jul 25 · this week</div>
-          <h3>Photos first — the foundation everything is built on</h3>
+          <h3>Photos start — the foundation everything is built on</h3>
           <div class="split">
             <div class="side you"><div class="lab">Your side</div>
               <ul>
                 <li>Pick 8–10 signature dishes to shoot first</li>
                 <li>Staff photographs each one — <b>same angle every time, natural light</b></li>
                 <li>Drop them in a shared folder: dish name + one line each</li>
-                <li>Send me any photos, videos & the full menu you already have</li>
+                <li>Send me any photos, videos &amp; the full menu you already have</li>
               </ul>
             </div>
             <div class="side me"><div class="lab">My side</div>
               <ul>
-                <li>Set up the shared folder + a simple shot cheat-sheet today</li>
-                <li>Draft the one message to your website rep that fixes the “Seattle” directions + the Facebook link</li>
+                <li>Set up the shared folder + a simple shot cheat-sheet</li>
+                <li>Line up the Owner.com fixes and the Resy setup so we can move the moment I'm back</li>
               </ul>
             </div>
           </div>
-          <div class="myend"><b>Heads up on my end:</b> I'm heads-down on grad-school deadlines this week, so the momentum right now is entirely the photos — the one thing only your kitchen can do.</div>
+          <div class="myend"><b>My end this week:</b> I'm heads-down on grad-school deadlines, so the momentum right now is the photos — the one thing only your kitchen can do.</div>
         </div>
 
         <div class="step"><div class="dot">✈</div>
-          <div class="when">Jul 26 – 31</div>
-          <h3>I'm away on a work trip — but nothing stalls</h3>
+          <div class="when">Jul 26 – 31 · I'm traveling for work</div>
+          <h3>Nothing stalls</h3>
           <div class="split">
             <div class="side you"><div class="lab">Your side</div>
               <ul>
                 <li>Keep shooting the next few dishes</li>
-                <li>Finish gathering existing media & the menu</li>
+                <li>Finish gathering existing media &amp; the menu</li>
               </ul>
             </div>
             <div class="side me"><div class="lab">My side</div>
               <ul>
-                <li>My Chicago editing team polishes the first batch as it lands</li>
-                <li>Finished sets come back to you — the base for Instagram, the menu, everything</li>
+                <li>My editing team polishes the first batch as it lands</li>
+                <li>Resy + Owner.com fixes queued and ready to fire the day I return</li>
               </ul>
             </div>
           </div>
-          <div class="myend">All async — no meeting needed. I'm on the group chat, just slower to reply that week.</div>
+          <div class="myend">All async — no meeting needed. I'm on the group chat, just a little slower that week.</div>
+        </div>
+
+        <div class="step key"><div class="dot">🚀</div>
+          <div class="when">Friday, Jul 31 · ON-SITE KICKOFF</div>
+          <h3>The day I land, I come straight to the restaurant</h3>
+          <div class="split">
+            <div class="side you"><div class="lab">Your side</div>
+              <ul>
+                <li>30–45 minutes with me — hand over Owner.com + Google access</li>
+                <li>Walk the kitchen so I know the best filming angles</li>
+              </ul>
+            </div>
+            <div class="side me"><div class="lab">My side</div>
+              <ul>
+                <li>Fix the Seattle links + stand up your real Instagram</li>
+                <li>Start the Resy setup; capture the day-0 scoreboard numbers</li>
+                <li>Post up for a couple hours and get the baseline set, in person</li>
+              </ul>
+            </div>
+          </div>
+          <div class="myend"><b>This is the hard start of the 60 days.</b> No more "we'll get to it" — the clock starts here.</div>
         </div>
 
         <div class="step"><div class="dot">①</div>
-          <div class="when">Aug 1 – 9</div>
-          <h3>Instagram foundation — slow on purpose</h3>
+          <div class="when">Aug 1 – 16 · foundation live</div>
+          <h3>Resy, the menu, and Instagram go live</h3>
           <div class="split">
             <div class="side you"><div class="lab">Your side</div>
               <ul>
-                <li>Meet the friend who'll run the account — a quick sit-down to roadmap it together</li>
-                <li>That's the whole job going forward: she sends a post, you 👍, it goes live</li>
+                <li>👍 the first posts in the group chat — that's the job</li>
               </ul>
             </div>
             <div class="side me"><div class="lab">My side</div>
               <ul>
-                <li>First polished photo set delivered</li>
-                <li>Set the account up properly — profile, hours pinned, first 1–2 posts</li>
-                <li>Google Business refresh so “indian food near me” finds you</li>
+                <li>Resy live + a peak-night waitlist</li>
+                <li>Menu photos up — matching &amp; beating the Kashan look</li>
+                <li>Google Business live; Instagram foundation set</li>
+                <li>Catering one-pager out to the Newport / Exchange Place towers</li>
+                <li>Source the branded-packaging options</li>
               </ul>
             </div>
           </div>
-          <div class="myend">Foundation first — the first couple of months are deliberately slow, not a firehose. (My parents are visiting Aug 7–9, so a lighter week on my end too.)</div>
+          <div class="myend">Deliberately steady — a foundation built to last, not a firehose.</div>
         </div>
 
         <div class="step"><div class="dot">②</div>
-          <div class="when">Aug 11 – 22</div>
-          <h3>Ramp up + the two decisions</h3>
+          <div class="when">Aug 17 – 31 · ramp + events</div>
+          <h3>Turn up the volume + the first Bollywood Night</h3>
           <div class="split">
             <div class="side you"><div class="lab">Your side</div>
               <ul>
-                <li>Posting picks up to 2–3 a week (10–12/month) — your part stays the 👍</li>
-                <li>Tell me if you want me managing ordering start to finish</li>
-                <li>You two make the website call (below)</li>
-              </ul>
-            </div>
-            <div class="side me"><div class="lab">My side</div>
-              <ul>
-                <li><b>Ordering & delivery:</b> we keep the POS you're comfortable with — I add a direct-order path + look at last-mile so fewer orders bleed the ~30% app commission</li>
-                <li><b>Website:</b> I bring you real numbers on both — make Owner.com work harder, or build your own (~$100 domain + full build) — and you decide</li>
-              </ul>
-            </div>
-          </div>
-          <div class="myend">I'm in classes in the city Aug 17–22, so this is where <b>decisions</b> get made — the heavy build kicks off right after, when I can give it real time.</div>
-        </div>
-
-        <div class="step"><div class="dot">③</div>
-          <div class="when">Late Aug → September</div>
-          <h3>Build it out + hit the streets</h3>
-          <div class="split">
-            <div class="side you"><div class="lab">Your side</div>
-              <ul>
-                <li>Lock in the website path</li>
+                <li>Lock a date for the Bollywood Night</li>
                 <li>Point me at the staff member who can walk the neighborhood</li>
               </ul>
             </div>
             <div class="side me"><div class="lab">My side</div>
               <ul>
-                <li>If you chose your own site — that's the full build, done properly, as its own project</li>
-                <li>I design & print the flyers; your staff walks the Newport / Exchange Place buildings where soliciting's allowed</li>
+                <li>Instagram to 2–3 posts/week + stories</li>
+                <li>Plan &amp; promote the Bollywood Night; roll out the branded packaging</li>
+                <li>Launch the weekday lunch-box combo for the towers; flyers where soliciting's allowed</li>
               </ul>
             </div>
           </div>
+          <div class="myend">I'm in the city for classes Aug 17–22 — close by, so we keep moving without a beat.</div>
         </div>
 
-        <div class="step"><div class="dot">★</div>
-          <div class="when">~60 days in</div>
-          <h3>We sit down again — did it work?</h3>
+        <div class="step key"><div class="dot">★</div>
+          <div class="when">~Sep 29 · Day-60 checkpoint</div>
+          <h3>We sit down with the numbers</h3>
           <ul>
-            <li>We look at the scoreboard together — followers, direct orders, first catering lead</li>
-            <li>If we've built momentum → we keep running, and figure out together what this partnership looks like: <b>you tell me what it's worth</b></li>
-            <li>If not → I hand you the baton knowing I did right by you, and you've spent nothing but a few plates of dosa</li>
+            <li>We read the scoreboard together — followers, reach, direct orders, catering booked, Resy covers, lunch lift</li>
+            <li>Momentum's there → we structure the partnership and keep building — the next location, the next idea</li>
+            <li>It's not → I hand off cleanly, having done right by you</li>
           </ul>
         </div>
 
@@ -444,14 +408,17 @@
 
       <div class="money2">
         <h3>On money — so it's crystal clear</h3>
-        <p>I <b>don't need to be paid for any of this right now.</b> The only thing I'll ever invoice is real out-of-pocket cost — prints, a domain — <b>with receipts, no surprises</b> — plus any extensive labor on a full website build. Everything else is on me until you've seen the work and the results. Then, down the road, we sit down and decide <b>together</b> what this is worth.</p>
+        <p>This is a <b>60-day pilot and I'm not billing my time for it.</b> The only things that ever get
+        invoiced are hard out-of-pocket costs — and the tools the business needs anyway, like Resy and
+        packaging — always <b>with receipts, no surprises.</b> At day 60 we read the scoreboard together
+        and structure what the partnership looks like from there. I'm serious about this, and I know you are too.</p>
       </div>
     </section>
   </div>
 
   <footer>
     <div class="serif">"From Bangalore, with butter."</div>
-    <div class="small">DAIVIK · JULY 2026 · LET'S MAKE THIS WEEK GREAT</div>
+    <div class="small">DAIVIK · BANGALORE KITCHEN · 60-DAY PILOT · KICKOFF FRI JUL 31</div>
   </footer>
 
 </div>
@@ -462,7 +429,7 @@
   asks.forEach(cb => cb.addEventListener('change', () => {
     cb.closest('.ask').classList.toggle('done', cb.checked);
     const n = [...asks].filter(c => c.checked).length;
-    count.textContent = n + ' / 7' + (n === 7 ? '  🎉 — that’s everything!' : '');
+    count.textContent = n + ' / 5' + (n === 5 ? '  🎉 — that’s everything!' : '');
   }));
 </script>
 
