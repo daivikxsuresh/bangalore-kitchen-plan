@@ -122,6 +122,46 @@
   .rail{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 18px;font-size:14.5px;color:var(--muted);}
   .rail b{color:var(--green);}
 
+  /* PROGRESS TRACKER */
+  .prog{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-top:34px;
+        box-shadow:0 2px 8px rgba(60,40,20,.07);}
+  .prog .top{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap;justify-content:space-between;
+             border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:20px;}
+  .prog .hero .n{font-family:Georgia,serif;font-size:54px;line-height:1;color:var(--maroon);font-weight:700;}
+  .prog .hero .n span{font-size:26px;color:var(--muted);}
+  .prog .hero .cap{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .prog .since{font-size:14.5px;color:var(--muted);max-width:360px;line-height:1.55;}
+  .prog .since b{color:var(--maroon-dk);}
+
+  .meter{margin-bottom:16px;}
+  .meter:last-of-type{margin-bottom:0;}
+  .meter .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px;}
+  .meter .nm{font-size:15.5px;font-weight:600;color:var(--maroon-dk);}
+  .meter .st{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;white-space:nowrap;}
+  .meter .st.on{color:var(--green);}
+  .meter .track{height:14px;background:#F1E7D4;border-radius:8px;}
+  .meter .fill{height:100%;border-radius:0 8px 8px 0;background:var(--maroon);}
+  .meter .fill.done{background:var(--green);}
+
+  .mlog{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;}
+  .mlog h4{font-family:Georgia,serif;font-size:18px;color:var(--maroon);margin-bottom:12px;}
+  .mrow{display:flex;gap:14px;padding:9px 0;font-size:15px;line-height:1.5;border-bottom:1px dashed var(--line);}
+  .mrow:last-child{border-bottom:none;}
+  .mrow .dt{color:var(--gold);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+            flex-shrink:0;width:56px;padding-top:3px;}
+  .mrow .tx b{color:var(--maroon-dk);}
+  .mrow.fresh{background:#F3EBDB;border-radius:10px;padding:12px 14px;border-bottom:none;margin-top:4px;}
+  .mrow.fresh .dt{color:var(--maroon);}
+  .nextup{margin-top:20px;}
+  .nextup .lab{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px;}
+  @media(max-width:560px){
+    .prog{padding:20px 18px;}
+    .prog .hero .n{font-size:44px;}
+    .meter .row{flex-direction:column;align-items:flex-start;gap:3px;}
+    .mrow{flex-direction:column;gap:3px;}
+    .mrow .dt{width:auto;padding-top:0;}
+  }
+
   footer{margin-top:70px;text-align:center;padding:36px 20px 0;border-top:3px double var(--gold-lt);}
   footer .serif{font-size:22px;color:var(--maroon);font-style:italic;}
   footer .small{margin-top:8px;font-size:13px;color:var(--muted);letter-spacing:.08em;}
@@ -218,6 +258,65 @@
     We kicked off in person at the restaurant on <b>Saturday, Aug 1</b>. Reservations are decided and the
     setup call is booked, the website fixes are queued, and the photos are the one thing that moves
     everything else forward. You move fast, I move faster. Let's build.
+  </div>
+
+  <div class="prog">
+    <div class="top">
+      <div class="hero">
+        <div class="n">28<span>%</span></div>
+        <div class="cap">Plan complete · updated Aug 1</div>
+      </div>
+      <div class="since">
+        <b>Six workstreams, two days in.</b> Every bar below moves only when something is actually
+        finished — not when it's started. This page updates as we go, so you always know exactly
+        where we stand without having to ask.
+      </div>
+    </div>
+
+    <div class="meter">
+      <div class="row"><span class="nm">🍽️ Reservations — Resy</span><span class="st on">Decided · 60%</span></div>
+      <div class="track"><div class="fill done" style="width:60%"></div></div>
+    </div>
+    <div class="meter">
+      <div class="row"><span class="nm">🌐 Website &amp; links</span><span class="st">Rep secured · 40%</span></div>
+      <div class="track"><div class="fill" style="width:40%"></div></div>
+    </div>
+    <div class="meter">
+      <div class="row"><span class="nm">📸 Photos &amp; the menu</span><span class="st">Awaiting your OK · 35%</span></div>
+      <div class="track"><div class="fill" style="width:35%"></div></div>
+    </div>
+    <div class="meter">
+      <div class="row"><span class="nm">📍 Get found &amp; fill lunch</span><span class="st">Access pending · 15%</span></div>
+      <div class="track"><div class="fill" style="width:15%"></div></div>
+    </div>
+    <div class="meter">
+      <div class="row"><span class="nm">📦 Branded packaging</span><span class="st">Sourcing · 10%</span></div>
+      <div class="track"><div class="fill" style="width:10%"></div></div>
+    </div>
+    <div class="meter">
+      <div class="row"><span class="nm">🎶 Events — Bollywood Night</span><span class="st">Agreed, not dated · 10%</span></div>
+      <div class="track"><div class="fill" style="width:10%"></div></div>
+    </div>
+
+    <div class="mlog">
+      <h4>What's been done so far</h4>
+      <div class="mrow"><span class="dt">Jul 15</span><span class="tx">First sit-down with Sunita. <b>Diagnosis agreed</b> — social presence and momentum, not filling seats.</span></div>
+      <div class="mrow"><span class="dt">Jul 22</span><span class="tx">Met Raghu in person, plan locked. Found and <b>fixed the "Get Directions" bug</b> that was sending customers to a Seattle address.</span></div>
+      <div class="mrow"><span class="dt">Aug 1</span><span class="tx"><b>On-site kickoff</b> at the restaurant — two hours, in person, working session.</span></div>
+      <div class="mrow"><span class="dt">Aug 1</span><span class="tx"><b>Reservations decided: Resy Platform</b> — $249/mo flat, $0 per cover, demo booked. Full comparison in section 4.</span></div>
+      <div class="mrow"><span class="dt">Aug 1</span><span class="tx"><b>Owner.com contact established</b> — Raghu introduced me to Alejandro as the point of contact for website and digital updates.</span></div>
+      <div class="mrow fresh"><span class="dt">Aug 1</span><span class="tx">✅ <b>First four dish photos edited and sent to you for approval</b> — before &amp; after, so you can see exactly what changed. Your yes or no on the style is what unlocks the rest of the menu.</span></div>
+    </div>
+
+    <div class="nextup">
+      <div class="lab">Next up — waiting on you</div>
+      <div class="rails">
+        <div class="rail"><b>1.</b> Your yes/no on the photo style</div>
+        <div class="rail"><b>2.</b> Resy setup call — floor plan, turn times, hours</div>
+        <div class="rail"><b>3.</b> Google Business Profile access</div>
+        <div class="rail"><b>4.</b> Repoint the Instagram &amp; Facebook links</div>
+      </div>
+    </div>
   </div>
 
   <section>
