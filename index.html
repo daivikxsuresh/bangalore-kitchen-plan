@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bangalore Kitchen — The 45-Day Growth Pilot</title>
+<title>Bangalore Kitchen — The Growth Plan</title>
 <style>
   :root{
     --cream:#FBF7F0; --card:#FFFFFF; --ink:#2E2A26; --muted:#7A6F63;
@@ -152,32 +152,72 @@
   .money2 p{font-size:15px;color:var(--ink);line-height:1.6;}
   .money2 p b{color:var(--maroon-dk);}
 
+  /* RESY — dedicated section */
+  .badge{display:inline-block;background:var(--green);color:#F1F6F0;border-radius:20px;
+         font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+         padding:4px 12px;vertical-align:7px;margin-left:10px;font-family:-apple-system,Arial,sans-serif;}
+  .verdict{background:var(--maroon);color:#F6EFE2;border-radius:14px;padding:24px 26px;margin-bottom:20px;}
+  .verdict .h{font-family:Georgia,serif;font-size:21px;color:#F6EFE2;margin-bottom:8px;}
+  .verdict .h em{color:#E9C87A;font-style:italic;}
+  .verdict p{font-size:15.5px;color:#E4D6C2;line-height:1.6;}
+  .verdict b{color:#E9C87A;}
+  .cmpwrap{overflow-x:auto;margin-bottom:8px;}
+  table.cmp{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+            border-radius:12px;overflow:hidden;font-size:14.5px;min-width:460px;}
+  table.cmp th{background:#F3EBDB;color:var(--maroon-dk);text-align:left;padding:12px 16px;
+               font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;}
+  table.cmp td{padding:12px 16px;border-top:1px solid var(--line);color:var(--ink);}
+  table.cmp td:first-child{font-weight:600;color:var(--maroon-dk);}
+  table.cmp tr.pick td{background:#EAF0E9;}
+  table.cmp tr.pick td:first-child{color:var(--green);}
+  table.cmp .free{color:var(--green);font-weight:700;}
+  table.cmp .cost{color:var(--maroon);font-weight:700;}
+  .cmpnote{font-size:13.5px;color:var(--muted);font-style:italic;margin-bottom:24px;}
+  .why3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px;}
+  @media(max-width:760px){.why3{grid-template-columns:1fr;}}
+  .why{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);
+       border-radius:12px;padding:20px 18px;box-shadow:0 1px 4px rgba(60,40,20,.05);}
+  .why .ico{font-size:24px;}
+  .why h3{font-size:16px;margin:9px 0 6px;color:var(--maroon-dk);}
+  .why p{font-size:14px;color:var(--muted);line-height:1.55;}
+  .needbox{background:var(--card);border:1px solid var(--gold-lt);border-left:4px solid var(--gold);
+           border-radius:12px;padding:22px 26px;}
+  .needbox h3{font-family:Georgia,serif;color:var(--maroon);font-size:19px;margin-bottom:4px;}
+  .needbox .sub{font-size:14px;color:var(--muted);margin-bottom:14px;}
+  .needbox ul{list-style:none;}
+  .needbox li{padding:7px 0 7px 26px;position:relative;font-size:15px;line-height:1.5;}
+  .needbox li::before{content:"→";position:absolute;left:2px;color:var(--gold);font-weight:700;}
+  .needbox li b{color:var(--maroon-dk);}
+  .keepline{margin-top:18px;background:#EFE6D3;border-radius:12px;padding:16px 22px;
+            font-size:15px;color:var(--maroon-dk);line-height:1.6;}
+  .keepline b{color:var(--maroon);}
+
   @media print{
     header{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     body{font-size:14px;}
     .pgbreak{page-break-before:always;}
-    .pg2head,.side.you,.side.me,.step .dot,.pillar,.urgency{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .pg2head,.side.you,.side.me,.step .dot,.pillar,.urgency,.verdict,.badge,
+    table.cmp th,table.cmp tr.pick td,.keepline{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="kicker">The 45-Day Growth Pilot · Raghu &amp; Sunita · Hard start Sat, Aug 1 2026</div>
-  <h1>Bangalore Kitchen<br><em>The Growth Pilot</em></h1>
-  <p class="sub">We're aligned and it's on. Forty-five focused days, a clear plan, and a real start date —
-  this is what we run, starting the week I'm back in town.</p>
+  <div class="kicker">The Growth Plan · Raghu &amp; Sunita · Kickoff Saturday, Aug 1 2026</div>
+  <h1>Bangalore Kitchen<br><em>The Growth Plan</em></h1>
+  <p class="sub">We're aligned and it's on. A clear plan, real dates, and work that's already
+  underway — this is what we run together.</p>
   <div class="byline">Daivik Suresh · Bangalore → Newport, JC</div>
 </header>
 
 <div class="wrap">
 
   <div class="urgency">
-    <div class="h">⚡ This is a real pilot with a hard start — and I'm all in.</div>
-    Photos begin <b>this week</b>. I'm traveling for work and back on the 29th; on <b>Saturday, Aug 1</b>
-    I come straight to the restaurant to set everything up in person. Forty-five focused days — then we
-    sit down, talk a real partnership, and sign a simple agreement together. You move fast, I move faster.
-    Let's build.
+    <div class="h">⚡ We're underway — and I'm all in.</div>
+    We kicked off in person at the restaurant on <b>Saturday, Aug 1</b>. Reservations are decided and the
+    setup call is booked, the website fixes are queued, and the photos are the one thing that moves
+    everything else forward. You move fast, I move faster. Let's build.
   </div>
 
   <section>
@@ -185,7 +225,7 @@
     <div class="heard">
       <div class="quote">
         <div class="q">“Our biggest problem is social presence and having the momentum.”</div>
-        <div class="a">— Sunita. That's exactly what this pilot solves. Nothing more, nothing less.</div>
+        <div class="a">— Sunita. That's exactly what this plan solves. Nothing more, nothing less.</div>
       </div>
       <div class="quote">
         <div class="q">The restaurant is packed whenever it's open.</div>
@@ -211,7 +251,7 @@
     <div class="work">
       <div class="wcard"><div class="ico">🌐</div><h3>Fix &amp; sharpen the website</h3><p>Repoint the Instagram + Facebook links (they point to a different "Bangalore Kitchen" in Seattle right now), stand up your real Instagram, and get real photos onto the menu.</p></div>
       <div class="wcard"><div class="ico">📸</div><h3>Photos &amp; the menu</h3><p>Shoot your signature dishes; my editing team polishes them to match — and beat — the Kashan Kitchen menu you showed me. Same platform, so we can absolutely get there.</p></div>
-      <div class="wcard"><div class="ico">🍽️</div><h3>Reservations — Resy</h3><p>Get discovered as the up-and-coming spot. Flat ~$249/mo, no per-cover fees. A peak-night waitlist keeps the line at the door — that line is your best advertising.</p></div>
+      <div class="wcard" style="border-left-color:var(--green);"><div class="ico">🍽️</div><h3>Reservations — Resy ✓</h3><p>Decided, and important enough that it gets its own section below. Flat ~$249/mo, no per-cover fees, and it puts you in front of American Express diners. <b style="color:var(--green);">See section 4.</b></p></div>
       <div class="wcard"><div class="ico">📦</div><h3>Branded packaging</h3><p>Custom boxes &amp; trays so every takeout and delivery order that leaves the door looks the part. A real investment in the brand — I'll bring options.</p></div>
       <div class="wcard"><div class="ico">📍</div><h3>Get found &amp; fill lunch</h3><p>Google Business Profile so "indian food near me" finds you, plus a weekday lunch-box combo built for the office towers next door.</p></div>
       <div class="wcard"><div class="ico">🎶</div><h3>Events — Bollywood Night</h3><p>Your space, your sound system. The kind of night that packs a slow evening and throws off a month of content in one shot.</p></div>
@@ -219,7 +259,74 @@
   </section>
 
   <section>
-    <h2><span class="num">4</span>How we operate — your time cost stays tiny</h2>
+    <h2><span class="num">4</span>Reservations — Resy<span class="badge">Decided · Aug 1</span></h2>
+    <p class="lede">This is the only piece of the plan with a real monthly cost attached, so it gets its own
+    section. We compared both platforms properly before choosing. Here's the whole case, in the open.</p>
+
+    <div class="verdict">
+      <div class="h">The decision: <em>Resy, on the "Platform" plan</em></div>
+      <p><b>$249/month, flat — with zero per-cover fees.</b> That tier already includes table management,
+      reservations, walk-in waitlists and POS integration, so it does everything we need on day one.
+      The demo call is booked; I'll run it, you sign and it goes on your account. You stay the owner of
+      everything, I run the day-to-day. Final pricing gets confirmed in writing before anything is signed.</p>
+    </div>
+
+    <h3 style="font-family:Georgia,serif;color:var(--maroon-dk);font-size:19px;margin-bottom:10px;">Why not OpenTable</h3>
+    <div class="cmpwrap">
+      <table class="cmp">
+        <tr><th>Platform</th><th>Monthly</th><th>Per guest seated</th></tr>
+        <tr><td>OpenTable Basic</td><td>$149</td><td class="cost">$0.25 / cover</td></tr>
+        <tr><td>OpenTable Core</td><td>$299</td><td class="cost">+ $1.00 / network cover</td></tr>
+        <tr><td>OpenTable Pro</td><td>$499</td><td class="cost">+ $1.00 / network cover</td></tr>
+        <tr class="pick"><td>Resy Platform ✓</td><td>$249</td><td class="free">$0 — always</td></tr>
+      </table>
+    </div>
+    <p class="cmpnote" style="margin-bottom:14px;">Resy's other tiers: <b>Platform 360</b> at $399 adds deeper
+    analytics, and there are two event-ticketing plans on the Tock side ($269 / $399) worth revisiting when we
+    plan the Bollywood Night. None of them charge per cover either. We start on Platform.</p>
+    <p class="cmpnote">Put simply: <b>OpenTable charges you more the busier you get. Resy doesn't.</b>
+    You're already packed — on a per-cover model you'd start paying a fee on guests who were walking
+    through that door anyway. At a thousand network covers a month that's over $1,000 on top of the
+    subscription. Resy is $249 whether you seat fifty people or five thousand.</p>
+
+    <div class="why3">
+      <div class="why"><div class="ico">💳</div><h3>It's American Express</h3>
+        <p>Amex owns Resy. Platinum and Gold cardholders get a <b>monthly dining credit that expires if they
+        don't use it</b> — so every month there's a pool of people actively hunting for a Resy restaurant to
+        spend it at. Amex says its members book 3.8× more often than everyone else.</p></div>
+      <div class="why"><div class="ico">📍</div><h3>Newport is wide open</h3>
+        <p>Open the Resy map around here and the pins cluster in Hoboken, Harsimus Cove and Exchange Place.
+        <b>Newport is bare.</b> A tower full of cardholders with a credit to burn opens that app and finds
+        nothing nearby. We should be what they find.</p></div>
+      <div class="why"><div class="ico">🎯</div><h3>The right crowd</h3>
+        <p>Resy's network is smaller than OpenTable's but skews to guests who plan ahead and spend more.
+        It also puts a <b>"Reserve a table" button directly on your Google listing</b> — which pairs with the
+        Google Business work in workstream five.</p></div>
+    </div>
+
+    <div class="needbox">
+      <h3>What I need from you for the setup call</h3>
+      <div class="sub">Six things. Most of them you know off the top of your head.</div>
+      <ul>
+        <li><b>Your floor plan</b> — every table and how many it seats, plus bar seats and any outdoor space</li>
+        <li><b>Turn times</b> — realistically, how long does a two-top hold a table versus a six-top?</li>
+        <li><b>Service hours, confirmed</b> — lunch and dinner get set up as two separate services</li>
+        <li><b>The POS name</b> — you're keeping it, and I'll confirm Resy runs alongside it with no swap</li>
+        <li><b>The legal entity + EIN</b> the contract should name — the website footer currently reads
+            "Dosa Spot LLC," so let's make sure the paperwork is right</li>
+        <li><b>A spare iPad</b>, if you have one — that's what the host stand runs on</li>
+      </ul>
+    </div>
+
+    <div class="keepline">
+      <b>One thing I'll protect:</b> not every table goes on Resy. We hold a block back for walk-ins, and
+      run a waitlist on peak nights. <b>The line at your door is your best advertising</b> — reservations
+      should smooth out the quiet stretches, never erase the crowd.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span>How we operate — your time cost stays tiny</h2>
     <div class="roles">
       <div class="role"><h3>You two 🧑‍🍳</h3><div class="time">~10 min / week</div>
         <p>Approve posts with a 👍 in our group chat. Answer the occasional voice-note question. Let us film during service. That's the whole job.</p></div>
@@ -232,7 +339,7 @@
   </section>
 
   <section>
-    <h2><span class="num">5</span>What we'll post — five pillars</h2>
+    <h2><span class="num">6</span>What we'll post — five pillars</h2>
     <div class="pillars">
       <div class="pillar"><div class="ico">🔥</div><h4>The Energy</h4><p>The packed room, the line, the buzz. Scarcity sells itself.</p></div>
       <div class="pillar"><div class="ico">🧈</div><h4>Dosa ASMR</h4><p>Butter on the tawa. The flip. The crack. No words needed.</p></div>
@@ -243,20 +350,20 @@
   </section>
 
   <section>
-    <h2><span class="num">6</span>What I need from you to start</h2>
+    <h2><span class="num">7</span>What I need from you to start</h2>
     <p class="lede">Five things get us to a strong baseline. Check them off as we go.</p>
     <div class="asks" id="asks">
       <label class="ask"><input type="checkbox"><div><div class="t">Owner.com access + your website rep's contact</div><div class="d">So I can fix the Seattle links, add menu photos, and set up your real Instagram. I'll get on a call with them next week.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Google Business Profile — manager access</div><div class="d">Quietly the most valuable item here. This is what "indian food near me" runs on.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Photos of the dishes — start sending</div><div class="d">A recent iPhone or any newer phone with a good camera. Same angle, natural light, near a window. Plus any photos/videos/menu you already have.</div></div></label>
-      <label class="ask"><input type="checkbox"><div><div class="t">Green light on Resy</div><div class="d">~$249/month flat, no per-cover fees. I manage the whole setup — I just need your go-ahead.</div></div></label>
+      <label class="ask"><input type="checkbox"><div><div class="t">Resy — the six setup details</div><div class="d">Green light given ✓ and the demo is booked. Now I need the floor plan with seat counts, turn times, confirmed hours, the POS name, the legal entity for the contract, and a spare iPad if there is one. All listed in section 4.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Your story — 10 minutes, recorded</div><div class="d">"How did you go from a food truck to four businesses?" I press record, you just talk. Fuel for months of content.</div></div></label>
       <div class="askcount" id="askcount">0 / 5</div>
     </div>
   </section>
 
   <section>
-    <h2><span class="num">7</span>What we will <u>not</u> do</h2>
+    <h2><span class="num">8</span>What we will <u>not</u> do</h2>
     <div class="rails">
       <div class="rail"><b>✓</b> Build on your website — never break what's working</div>
       <div class="rail"><b>✓</b> No paid ads until organic growth is maxed out</div>
@@ -268,10 +375,10 @@
 
   <div class="pgbreak">
     <div class="pg2head">
-      <div class="kicker">Page 2 · The 45-Day Timeline</div>
-      <h2>Hard start Aug 1 → checkpoint ~Sep 15</h2>
-      <p>Real dates, sequenced around both our calendars so it actually gets done. Photos start now;
-      the pilot clock starts the day I'm on-site. Each phase has a <b>your side</b> and a <b>my side</b>.</p>
+      <div class="kicker">Page 2 · The Timeline</div>
+      <h2>Kickoff Aug 1 → through mid-September</h2>
+      <p>Real dates, sequenced around both our calendars so it actually gets done. Each phase has a
+      <b>your side</b> and a <b>my side</b> — and the heavy lifting sits on mine.</p>
     </div>
 
     <section>
@@ -327,18 +434,19 @@
             <div class="side you"><div class="lab">Your side</div>
               <ul>
                 <li>30–45 minutes with me — hand over Owner.com + Google access</li>
+                <li>The six Resy setup details from section 4 (floor plan, POS name, entity)</li>
                 <li>Walk the kitchen so I know the best filming angles</li>
               </ul>
             </div>
             <div class="side me"><div class="lab">My side</div>
               <ul>
                 <li>Fix the Seattle links + stand up your real Instagram</li>
-                <li>Start the Resy setup; capture the day-0 baseline (privately, on my end)</li>
+                <li><b>Resy demo call booked ✓</b> — I run it, we confirm the terms in writing</li>
                 <li>Post up for a couple hours and get the baseline set, in person</li>
               </ul>
             </div>
           </div>
-          <div class="myend"><b>This is the hard start of the 45 days.</b> No more "we'll get to it" — the clock starts here.</div>
+          <div class="myend"><b>This is where it becomes real.</b> No more "we'll get to it" — we start here.</div>
         </div>
 
         <div class="step"><div class="dot">①</div>
@@ -385,12 +493,11 @@
         </div>
 
         <div class="step key"><div class="dot">★</div>
-          <div class="when">~Sep 15 · Day-45 checkpoint</div>
+          <div class="when">Mid-September</div>
           <h3>We sit down and make it official</h3>
           <ul>
             <li>We look at everything we've built together — the brand, the reach, the direct orders, the catering &amp; events, the lunch turnaround</li>
-            <li>Momentum's there → we structure a real partnership and put it in a simple written agreement we both sign</li>
-            <li>It's not → I hand off cleanly, having done right by you</li>
+            <li>Then we structure a real partnership and put it in a simple written agreement we both sign</li>
           </ul>
         </div>
 
@@ -398,10 +505,10 @@
 
       <div class="money2">
         <h3>On money &amp; the partnership — transparent from day one</h3>
-        <p>This is a <b>45-day pilot and I'm not billing my time for it.</b> The only things that ever get
-        invoiced are hard out-of-pocket costs — and the tools the business needs anyway, like Resy and
-        packaging — always <b>with receipts, no surprises.</b> As we near day 45, we sit down and talk a
-        real partnership — a retainer or whatever structure fits — and put it in a <b>simple written
+        <p><b>I'm not billing my time.</b> The only things that ever get invoiced are hard out-of-pocket
+        costs — and the tools the business needs anyway, like Resy and packaging — always <b>with receipts,
+        no surprises.</b> Come mid-September, once you've seen the work and the results, we sit down and
+        talk a real partnership — a retainer or whatever structure fits — and put it in a <b>simple written
         agreement we both sign.</b> You see me put in the work first, then we make it official, together.
         I'm serious about this, and I know you are too.</p>
       </div>
@@ -410,7 +517,7 @@
 
   <footer>
     <div class="serif">"From Bangalore, with butter."</div>
-    <div class="small">DAIVIK · BANGALORE KITCHEN · 45-DAY PILOT · KICKOFF SAT AUG 1</div>
+    <div class="small">DAIVIK · BANGALORE KITCHEN · THE GROWTH PLAN · KICKOFF AUG 1 2026</div>
   </footer>
 
 </div>
