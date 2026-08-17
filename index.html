@@ -35,6 +35,22 @@
   .urgency b{color:#E9C87A;}
   .urgency .h{font-family:Georgia,serif;font-size:18px;color:#F6EFE2;margin-bottom:6px;}
 
+  /* LATEST — dated status strip */
+  .latest{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);
+          border-radius:14px;padding:20px 24px;margin-top:16px;box-shadow:0 2px 8px rgba(60,40,20,.07);}
+  .latest .cap{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+               font-weight:700;margin-bottom:10px;}
+  .latest .hl{font-family:Georgia,serif;font-size:20px;color:var(--maroon-dk);line-height:1.35;margin-bottom:12px;}
+  .latest ul{margin:0;padding-left:20px;line-height:1.65;font-size:15px;color:var(--muted);}
+  .latest li{margin-bottom:5px;}
+  .latest li b{color:var(--maroon-dk);}
+  .latest .clock{margin-top:14px;background:#F3EBDB;border-radius:10px;padding:11px 15px;font-size:14.5px;
+                 color:var(--maroon-dk);line-height:1.55;}
+  .latest .clock b{color:var(--maroon);}
+  .latest .need{margin-top:12px;border-top:1px dashed var(--line);padding-top:12px;font-size:14.5px;color:var(--muted);}
+  .latest .need b{color:var(--green);}
+  @media(max-width:560px){ .latest{padding:18px 18px;} .latest .hl{font-size:18px;} }
+
   /* HEARD */
   .heard{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   @media(max-width:700px){.heard{grid-template-columns:1fr;}}
@@ -286,15 +302,41 @@
   <div class="urgency">
     <div class="h">⚡ We're underway — and I'm all in.</div>
     We kicked off in person at the restaurant on <b>Saturday, Aug 1</b>. Reservations are decided and the
-    setup call is booked, the website fixes are queued, and the photos are the one thing that moves
+    terms are locked, the Owner.com working session is booked, and the photos are the one thing that moves
     everything else forward. You move fast, I move faster. Let's build.
+  </div>
+
+  <div class="latest">
+    <div class="cap">⚡ Latest · Aug 16</div>
+    <div class="hl">Resy terms are locked: <b>12 months at $249/month, flat.</b></div>
+    <ul>
+      <li><b>Why 12 and not 36.</b> Resy offered $189/month on a three-year term — about $60/month cheaper.
+          I turned it down. They still haven't put their early-termination terms in writing, and I won't
+          tie your restaurant to a three-year contract we can't read our way out of. The extra ~$60/month
+          buys you an exit. I've asked for those terms anyway, in writing.</li>
+      <li><b>Sunita — your fee question, answered.</b> The 2.9% + 30¢ applies <b>only to cards Resy itself
+          processes</b> — deposits, no-show holds, and event tickets. It never touches your POS or a normal
+          dinner check. Your day-to-day card processing does not change at all.</li>
+      <li><b>Onboarding is started.</b> Raghu signs; I'm listed as the onboarding contact so the setup work
+          lands on me, not on you. DBA on file as <b>The Bangalore Kitchen</b>.</li>
+      <li><b>Owner.com — working session booked</b> with Alejandro for <b>Monday, Aug 24</b>. Agenda: admin
+          access to the website, the photo spec that's holding up the menu shoot, and a front-door QR code
+          we can actually track.</li>
+    </ul>
+    <div class="clock">⏰ <b>One date that matters: Wednesday, Sept 10.</b> To hold $249, the contract has to be
+      <b>signed and billing info entered by then</b> — Resy's list price for new accounts is now $289.
+      Signing is <b>not</b> the same as opening: <b>billing still doesn't start until we go live</b>, and we can
+      set that date afterwards. So there's no rush on the launch — only on the signature.</div>
+    <div class="need"><b>▸ What I need from you two:</b> the <b>legal entity name + EIN</b> for the contract, and
+      your pick of go-live date — I'd suggest <b>Tue Sept 8 or Wed Sept 9</b> (Labor Day is the 7th).
+      Those two answers are the only thing standing between here and live.</div>
   </div>
 
   <div class="prog">
     <div class="top">
       <div class="hero">
-        <div class="n">33<span>%</span></div>
-        <div class="cap">Plan complete · updated Aug 11</div>
+        <div class="n">36<span>%</span></div>
+        <div class="cap">Plan complete · updated Aug 17</div>
       </div>
       <div class="since">
         <b>Six workstreams, running.</b> Every bar below moves only when something is actually
@@ -304,12 +346,12 @@
     </div>
 
     <div class="meter">
-      <div class="row"><span class="nm">🍽️ Reservations — Resy</span><span class="st on">Terms confirmed · 78%</span></div>
-      <div class="track"><div class="fill done" style="width:78%"></div></div>
+      <div class="row"><span class="nm">🍽️ Reservations — Resy</span><span class="st on">Term locked · 85%</span></div>
+      <div class="track"><div class="fill done" style="width:85%"></div></div>
     </div>
     <div class="meter">
-      <div class="row"><span class="nm">🌐 Website &amp; links</span><span class="st">Rep secured · 40%</span></div>
-      <div class="track"><div class="fill" style="width:40%"></div></div>
+      <div class="row"><span class="nm">🌐 Website &amp; links</span><span class="st">Call booked Aug 24 · 45%</span></div>
+      <div class="track"><div class="fill" style="width:45%"></div></div>
     </div>
     <div class="meter">
       <div class="row"><span class="nm">📸 Photos &amp; the menu</span><span class="st">Awaiting your OK · 35%</span></div>
@@ -338,17 +380,21 @@
       <div class="mrow"><span class="dt">Aug 1</span><span class="tx"><b>Reservations researched and decided: Resy Platform.</b> Priced against all three OpenTable tiers before choosing. Full comparison in section 4.</span></div>
       <div class="mrow"><span class="dt">Aug 1</span><span class="tx"><b>Owner.com contact established</b> — Raghu introduced me to Alejandro as the point of contact for website and digital updates.</span></div>
       <div class="mrow"><span class="dt">Aug 1</span><span class="tx"><b>First four dish photos edited and sent for approval</b> — before &amp; after, so you can see exactly what changed. Your yes or no on the style unlocks the rest of the menu.</span></div>
-      <div class="mrow fresh"><span class="dt">Aug 11</span><span class="tx">✅ <b>Resy demo call run with their team.</b> Pricing confirmed in writing at <b>$249/month with no setup fee</b>, billing starting only at go-live. Three things checked that nobody had asked yet: your Clover POS, event ticketing for Bollywood Night, and the American Express side. <b>All three answers are in section 4.</b></span></div>
+      <div class="mrow"><span class="dt">Aug 11</span><span class="tx">✅ <b>Resy demo call run with their team.</b> Pricing confirmed in writing at <b>$249/month with no setup fee</b>, billing starting only at go-live. Three things checked that nobody had asked yet: your Clover POS, event ticketing for Bollywood Night, and the American Express side. <b>All three answers are in section 4.</b></span></div>
+      <div class="mrow fresh"><span class="dt">Aug 16</span><span class="tx">✅ <b>Term decided and put in writing: 12 months at $249 flat.</b> Resy's three-year offer at $189/month was on the table and I turned it down — they haven't answered how you'd get out early, and I'm not signing your restaurant into three years blind. Sent to Resy with a written request for the early-termination and auto-renewal terms. <b>Full reasoning in section 4.</b></span></div>
+      <div class="mrow fresh"><span class="dt">Aug 16</span><span class="tx">✅ <b>Sunita's card-fee question answered</b> — the 2.9% + 30¢ only ever touches cards Resy processes itself (deposits, no-show holds, event tickets), <b>never your POS</b>. And <b>onboarding opened</b>: Raghu signs, I take the onboarding seat, DBA on file as The Bangalore Kitchen.</span></div>
+      <div class="mrow fresh"><span class="dt">Aug 16</span><span class="tx">✅ <b>Owner.com working session booked</b> — Monday, Aug 24 with Alejandro Frias, your Customer Success Manager. Three asks went ahead of it in writing: admin access to the site, the image spec the menu shoot is blocked on, and a trackable front-door QR code.</span></div>
     </div>
 
     <div class="nextup">
       <div class="lab">Next up — waiting on you</div>
       <div class="rails">
-        <div class="rail"><b>1.</b> Legal business name + DBA for the Resy contract</div>
-        <div class="rail"><b>2.</b> Sign the Resy agreement — pricing is time-sensitive</div>
-        <div class="rail"><b>3.</b> Your yes/no on the photo style</div>
-        <div class="rail"><b>4.</b> Google Business Profile access</div>
-        <div class="rail"><b>5.</b> Floor plan, turn times &amp; a spare iPad for setup</div>
+        <div class="rail"><b>1.</b> Legal entity name + EIN — Resy can't send paperwork without it</div>
+        <div class="rail"><b>2.</b> Pick the go-live date — Tue Sept 8 or Wed Sept 9</div>
+        <div class="rail"><b>3.</b> Raghu signs by Wed Sept 10 to hold $249</div>
+        <div class="rail"><b>4.</b> Your yes/no on the photo style</div>
+        <div class="rail"><b>5.</b> Google Business Profile access</div>
+        <div class="rail"><b>6.</b> Floor plan, turn times &amp; a spare iPad for setup</div>
       </div>
     </div>
   </div>
@@ -392,22 +438,52 @@
   </section>
 
   <section>
-    <h2><span class="num">4</span>Reservations — Resy<span class="badge">Demo done · Aug 11</span></h2>
+    <h2><span class="num">4</span>Reservations — Resy<span class="badge">Term locked · Aug 16</span></h2>
     <p class="lede">This is the only piece of the plan with a real monthly cost attached, so it gets its own
     section. We compared both platforms properly before choosing. Here's the whole case, in the open.</p>
 
     <div class="verdict">
-      <div class="h">Confirmed on the call: <em>Resy, "Platform" plan — $249/month</em></div>
+      <div class="h">Locked Aug 16: <em>Resy, "Platform" plan — $249/month, twelve-month term</em></div>
       <p><b>$249/month, flat, with zero per-cover fees — and no setup fee.</b> Billing does not start
-      when you sign; it starts the day you go live. The term is twelve months, and
-      <b>renewal in year two stays at $249</b> rather than stepping up. Table management, reservations,
+      when you sign; it starts the day you go live. Table management, reservations,
       walk-in waitlists, automated guest text reminders and optional card-holds for no-show protection
       are all included at this tier. It goes on your account, in your business's name — you own it,
       I run the day-to-day.</p>
-      <p style="margin-top:10px;"><b>One time-sensitive note, in the open:</b> Resy's list pricing goes
-      up to $289/month for new twelve-month accounts. The $249 was quoted to us before that change and
-      they have it held for us. It is worth roughly <b>$480 over the first year</b> — which is the only
-      reason I'm raising the timing at all.</p>
+
+      <p style="margin-top:10px;"><b>Why twelve months and not three years.</b> Resy priced the term three
+      ways: <b>12 months at $249, 24 at $229, 36 at $189.</b> The three-year deal saves roughly
+      <b>$60/month — about $2,200 over three years</b>, and I still said no. The reason is simple: they have
+      not yet put in writing what it costs you to get out early. A three-year contract with an unreadable
+      exit is a liability on a business that's still growing, and it would outlast this plan by two years.
+      Twelve months at $249 is us paying a small premium for the right to walk. I've asked for the
+      early-termination and auto-renew terms anyway, in writing, and I'll put the answer here when it lands.</p>
+
+      <p style="margin-top:10px;"><b>Correcting something I told you earlier, because you should hear it from me:</b>
+      I said renewal in year two would hold at $249. <b>That was wrong.</b> Resy has since confirmed they do
+      <b>not</b> grandfather renewals — and their list price for new accounts has already moved from $249 to
+      $289. So year two gets renegotiated, not inherited. That's not a reason to avoid the deal; it's a reason
+      to diary it. <b>I'll open the renewal conversation about ninety days before the anniversary</b>, with a
+      year of your own booking data in hand — which is a much stronger position than we're negotiating from today.</p>
+
+      <p style="margin-top:10px;"><b>The one date that's actually time-sensitive:</b> to hold $249 rather than
+      $289, the contract must be <b>signed and billing details entered by Wednesday, Sept 10.</b> That's worth
+      about <b>$480 over the first year.</b> Signing is not opening — <b>billing still starts only on go-live</b>,
+      and the launch date can be set after signing without changing the price. So please don't let picking a
+      launch date hold up the signature.</p>
+    </div>
+
+    <div class="needbox" style="margin-top:22px;">
+      <h3>Sunita's question: "does this change our card fees?"</h3>
+      <div class="sub">Short answer — no. Your POS and your regular checks are untouched.</div>
+      <p style="margin:0 0 10px;">You asked what the <b>2.9% + 30¢</b> applies to, and it's a good question
+      because the answer decides whether this costs you anything beyond the subscription. It doesn't.</p>
+      <p style="margin:0 0 10px;"><b>That rate only applies to cards Resy itself processes</b>, which is
+      exactly three situations: a <b>deposit</b> on a large party, a <b>no-show hold</b> if we choose to switch
+      those on, and <b>tickets sold for an event</b> like Bollywood Night. Those are all cases where money
+      moves before the guest ever sits down — so there's no POS involved to run it through.</p>
+      <p style="margin:0;"><b>A normal dinner check is not affected.</b> The guest books on Resy, eats, and
+      pays on your Clover exactly as they do today, at whatever rate you already pay. Resy never sees that
+      transaction and never takes a cut of it. <b>Confirmed in writing, Aug 16.</b></p>
     </div>
 
     <h3 style="font-family:Georgia,serif;color:var(--maroon-dk);font-size:19px;margin-bottom:10px;">Why not OpenTable</h3>
@@ -451,11 +527,14 @@
 
     <div class="needbox">
       <h3>What I still need from you</h3>
-      <div class="sub">The POS question is answered. Five things left — the first one is blocking the contract.</div>
+      <div class="sub">The POS and fee questions are answered. Six things left — the first two are blocking the contract.</div>
       <ul>
-        <li><b>The legal business name and DBA</b> for the contract — the website footer currently reads
+        <li><b>The legal entity name and EIN</b> for the contract — the website footer currently reads
             "Dosa Spot LLC," and Resy needs the exact registered name before they can send paperwork.
             <b>This is the one holding everything up.</b></li>
+        <li><b>Your go-live date</b> — I'd suggest <b>Tuesday Sept 8 or Wednesday Sept 9</b> (Labor Day is the
+            7th, so I've left that week's start alone). Remember this only sets when billing starts; it does
+            not affect the price, and it must not delay the Sept 10 signature.</li>
         <li><b>Your floor plan</b> — every table and how many it seats, plus bar seats and any outdoor space</li>
         <li><b>Turn times</b> — realistically, how long does a two-top hold a table versus a six-top?
             Sunita, this one's really for you. Without a POS link these numbers are what the system runs on,
@@ -492,8 +571,8 @@
 
     <div class="verdict" style="margin-top:22px;">
       <div class="h">Where it stands — and what happens next</div>
-      <p><b>Raghu — the one thing I need from you is the legal business name and DBA.</b> Resy can't send
-      paperwork without it, and the $249 is being held for us. Everything else on my side is ready to go.</p>
+      <p><b>Raghu — the one thing I need from you is the legal entity name and EIN.</b> Resy can't send
+      paperwork without it, and the $249 only holds until Sept 10. Everything else on my side is ready to go.</p>
       <p style="margin-top:10px;">Once that's in:</p>
       <ul style="margin:8px 0 0 18px;padding:0;line-height:1.75;">
         <li>Resy assigns us a dedicated implementation manager — training is included, and it's on them, not on your staff's time.</li>
@@ -501,10 +580,12 @@
         <li>I build out the floor plan, services and turn times from what you send me.</li>
         <li>We pick a go-live date together — and remember, <b>billing doesn't start until that day</b>.</li>
       </ul>
-      <p style="margin-top:12px;">Still being confirmed in writing before anything gets signed: American
-      Express dining-credit eligibility for us specifically, that your guest data stays yours and can be
-      exported if you ever leave, and the renewal notice terms. <b>I'm not asking you to sign until those
-      three come back.</b></p>
+      <p style="margin-top:12px;"><b>Still open, and requested in writing on Aug 16:</b> what it costs to
+      terminate early, the auto-renewal notice period, and written confirmation that your guest data stays
+      yours and exports cleanly if you ever leave. American Express dining-credit eligibility is partly
+      answered — the invite-only Global Dining Access programme is New York City only and doesn't reach
+      Jersey City, which I've said plainly above. <b>I'll have these answers in front of you before the
+      signature, not after.</b></p>
     </div>
   </section>
 
@@ -536,7 +617,7 @@
     <h2><span class="num">7</span>What I need from you to start</h2>
     <p class="lede">Five things get us to a strong baseline. Check them off as we go.</p>
     <div class="asks" id="asks">
-      <label class="ask"><input type="checkbox"><div><div class="t">Owner.com access + your website rep's contact</div><div class="d">So I can fix the Seattle links, add menu photos, and set up your real Instagram. I'll get on a call with them next week.</div></div></label>
+      <label class="ask"><input type="checkbox"><div><div class="t">Owner.com — admin access to your website</div><div class="d">The call with Alejandro is booked for Mon Aug 24. What I still don't have is admin-level access — I'm on the account at customer level only, which isn't enough to fix the links, load the menu photos, or read your direct-order numbers. One line from Raghu to Alejandro authorising it clears this.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Google Business Profile — manager access</div><div class="d">Quietly the most valuable item here. This is what "indian food near me" runs on.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Photos of the dishes — start sending</div><div class="d">A recent iPhone or any newer phone with a good camera. Same angle, natural light, near a window. Plus any photos/videos/menu you already have.</div></div></label>
       <label class="ask"><input type="checkbox"><div><div class="t">Resy — the six setup details</div><div class="d">Green light given ✓ and the demo is booked. Now I need the floor plan with seat counts, turn times, confirmed hours, the POS name, the legal entity for the contract, and a spare iPad if there is one. All listed in section 4.</div></div></label>
@@ -633,7 +714,7 @@
         </div>
 
         <div class="step"><div class="dot">①</div>
-          <div class="when">Aug 1 – 16 · foundation live</div>
+          <div class="when">Aug 1 – Sep 9 · foundation live</div>
           <h3>Resy, the menu, and Instagram go live</h3>
           <div class="split">
             <div class="side you"><div class="lab">Your side</div>
@@ -643,7 +724,8 @@
             </div>
             <div class="side me"><div class="lab">My side</div>
               <ul>
-                <li>Resy live + a peak-night waitlist</li>
+                <li>Resy signed by Sept 10, live Sept 8–9, with a peak-night waitlist</li>
+                <li>Owner.com working session Aug 24 — booking button, menu photos, trackable front-door QR</li>
                 <li>Menu photos up — matching &amp; beating the Kashan look</li>
                 <li>Google Business live; Instagram foundation set</li>
                 <li>Catering one-pager out to the Newport / Exchange Place towers</li>
